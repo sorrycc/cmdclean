@@ -21,6 +21,11 @@ $ npm install cmdclean -g
 var cmdclean = require('cmdclean');
 ```
 
+## Thanks to
+
+* [amdclean](https://github.com/gfranko/amdclean)
+* [kclean](https://github.com/kissyteam/kclean)
+
 ## LISENCE
 
 Copyright (c) 2014 chencheng. Licensed under the MIT license.
