@@ -1,4 +1,4 @@
-# cmdclean [![Build Status](https://travis-ci.org/chencheng/cmdclean.png?branch=master)](https://travis-ci.org/chencheng/cmdclean) [![Coverage Status](https://coveralls.io/repos/chencheng/cmdclean/badge.png?branch=master)](https://coveralls.io/r/chencheng/cmdclean?branch=master) 
+# cmdclean
 
 [![NPM version](https://img.shields.io/npm/v/cmdclean.svg?style=flat)](https://npmjs.org/package/cmdclean)
 [![Build Status](https://img.shields.io/travis/chencheng/cmdclean.svg?style=flat)](https://travis-ci.org/chencheng/cmdclean)
