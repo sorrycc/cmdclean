@@ -1,0 +1,25 @@
+{
+  "name": "cmdclean",
+  "version": "0.1.0",
+  "description": "A build tool that converts CMD code to standard JavaScript.",
+  "main": "index",
+  "dependencies": {
+    "commander": "~2.1.0"
+  },
+  "devDependencies": {
+    "istanbul": "0",
+    "coveralls": "2",
+    "mocha": "1",
+    "should": "3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chencheng/cmdclean"
+  },
+  "homepage": "https://github.com/chencheng/cmdclean",
+  "author": "chencheng <sorrycc@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "make test"
+  }
+}

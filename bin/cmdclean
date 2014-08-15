@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+
+'use strict';
+
+var program = require('commander');
+
+// usage
+
+program
+  .version(require('../package').version)
+  .option('-v, --verbose', 'verbose output')
+  .on('--help', helpInfo)
+  .parse(process.argv);
+
+function helpInfo() {
+  console.log('  Examples:');
+  console.log();
+  console.log('    $ cmdclean');
+  console.log();
+}
