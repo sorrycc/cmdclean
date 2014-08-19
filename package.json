@@ -18,9 +18,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/chencheng/cmdclean"
+    "url": "https://github.com/sorrycc/cmdclean"
   },
-  "homepage": "https://github.com/chencheng/cmdclean",
+  "homepage": "https://github.com/sorrycc/cmdclean",
   "author": "chencheng <sorrycc@gmail.com>",
   "license": "MIT",
   "scripts": {
