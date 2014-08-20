@@ -45,7 +45,6 @@ a = function () {
 
   it('empty statement', function() {
     var result = cmdclean('define("a",[],function(){;});');
-    console.log(result);
     result.should.be.equal(multiline(function(){/*
 ;(function() {
 var a;
