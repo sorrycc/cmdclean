@@ -41,7 +41,19 @@ a = function () {
 }();
 }());
    */}));
- });
+   });
+
+  it('empty statement', function() {
+    var result = cmdclean('define("a",[],function(){;});');
+    console.log(result);
+    result.should.be.equal(multiline(function(){/*
+;(function() {
+var a;
+a = function () {
+}();
+}());
+     */}));
+  });
 
   function assets(actual, dest) {
     var expected = fs.readFileSync(join(__dirname, 'fixtures/expect/', dest), 'utf-8');
