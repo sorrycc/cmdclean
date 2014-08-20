@@ -1,4 +1,5 @@
 ;(function() {
+/* comment */
 var a_100_indexjs;
 define('jquery', [], function (require, module, exports) {
   exports = exports || {};
