@@ -17,9 +17,19 @@ describe('cmdclean', function() {
   it('nodeps', function() {
     var result = cmdclean({
       filePath: join(__dirname, 'fixtures/nodeps.js'),
-      createAnonymousAMDModule: true
+      createAnonymousAMDModule: true,
+      prefixTransform: null
     });
     assets(result, 'nodeps.js');
+  });
+
+  it('ignore', function() {
+    var result = cmdclean({
+      filePath: join(__dirname, 'fixtures/ignore.js'),
+      createAnonymousAMDModule: true,
+      ignoreModules: ['jquery']
+    });
+    assets(result, 'ignore.js');
   });
 
   function assets(actual, dest) {
