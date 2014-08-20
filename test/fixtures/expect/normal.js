@@ -10,4 +10,5 @@ a_100_indexjs = function (exports) {
   exports = 'foo' + relative;
   return exports;
 }();
+window.a_100_indexjs = a_100_indexjs;
 }());

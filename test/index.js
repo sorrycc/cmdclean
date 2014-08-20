@@ -9,7 +9,8 @@ describe('cmdclean', function() {
 
   it('normal', function() {
     var result = cmdclean({
-      filePath: join(__dirname, 'fixtures/normal.js')
+      filePath: join(__dirname, 'fixtures/normal.js'),
+      globalModules: ['a_100_indexjs']
     });
     assets(result, 'normal.js');
   });
