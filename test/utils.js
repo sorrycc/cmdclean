@@ -1,7 +1,7 @@
 var esprima = require('esprima');
 var utils = require('../lib/utils');
 
-describe.only('utils', function() {
+describe('utils', function() {
 
   it('getRequires', function() {
     var ast;

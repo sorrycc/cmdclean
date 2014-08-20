@@ -6,12 +6,20 @@ var fs = require('fs');
 
 describe('cmdclean', function() {
 
-  it('Normal use', function() {
+  it('normal', function() {
     var result = cmdclean({
       filePath: join(__dirname, 'fixtures/normal.js'),
       createAnonymousAMDModule: true
     });
     assets(result, 'normal.js');
+  });
+
+  it('nodeps', function() {
+    var result = cmdclean({
+      filePath: join(__dirname, 'fixtures/nodeps.js'),
+      createAnonymousAMDModule: true
+    });
+    assets(result, 'nodeps.js');
   });
 
   function assets(actual, dest) {
