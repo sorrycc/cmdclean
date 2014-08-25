@@ -24,9 +24,9 @@ cmdclean(code, opts);
 
 ## Options
 
-### umd=<globalVar>
+### umd
 
-Add umd wrap with globalVar.
+Add umd wrapper, the value of umd will be assigned to window with the entry module.
 
 ## Thanks to
 
