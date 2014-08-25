@@ -19,7 +19,14 @@ $ npm install cmdclean -g
 
 ```bash
 var cmdclean = require('cmdclean');
+cmdclean(code, opts);
 ```
+
+## Options
+
+### umd=<globalVar>
+
+Add umd wrap with globalVar.
 
 ## Thanks to
 
