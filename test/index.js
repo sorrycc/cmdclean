@@ -15,6 +15,14 @@ describe('cmdclean', function() {
     assets(result, 'normal.js');
   });
 
+  it('umd', function() {
+    var result = cmdclean({
+      filePath: join(__dirname, 'fixtures/normal.js'),
+      umd:'normal'
+    });
+    assets(result, 'umd.js');
+  });
+
   it('nodeps', function() {
     var result = cmdclean({
       filePath: join(__dirname, 'fixtures/nodeps.js'),
