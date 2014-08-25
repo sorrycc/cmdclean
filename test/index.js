@@ -43,6 +43,16 @@ a = function () {
    */}));
    });
 
+  it('no function wrap', function() {
+    var result = cmdclean('define("a",[],function(){1;});', {wrap:null});
+    result.should.be.equal(multiline(function(){/*
+var a;
+a = function () {
+  1;
+}();
+     */}));
+  });
+
   it('empty statement', function() {
     var result = cmdclean('define("a",[],function(){;});');
     result.should.be.equal(multiline(function(){/*
