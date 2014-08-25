@@ -6,5 +6,6 @@ define('a/1.0.0/relative.js', ['a/1.0.0/literal.js'], function(require, module, 
   module.exports = 'relative' + require('a/1.0.0/literal.js');
 });
 define('a/1.0.0/literal.js', [], function(require, module, exports) {
-  return 'literal';
+  var ret = 'literal';
+  return ret;
 });
