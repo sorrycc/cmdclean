@@ -72,6 +72,46 @@ a = function () {
      */}));
   });
 
+  it('exports', function() {
+    var result;
+
+    result = cmdclean('define("a",[],function(require,module,exports){var a=exports;a.b=1;});');
+    result.should.be.equal(multiline(function(){/*
+;(function() {
+var _a_;
+_a_ = function (exports) {
+  var a = exports;
+  a.b = 1;
+  return exports;
+}({});
+}());
+     */}));
+
+    result = cmdclean('define("a",[],function(require,module,exports){var a=exports={};a.b=1;});');
+    result.should.be.equal(multiline(function(){/*
+;(function() {
+var _a_;
+_a_ = function (exports) {
+  var a = exports = {};
+  a.b = 1;
+  return exports;
+}({});
+}());
+     */}));
+
+    result = cmdclean('define("a",[],function(require,module,exports){var a=b=c=d=exports={};a.b=1;});');
+    result.should.be.equal(multiline(function(){/*
+;(function() {
+var _a_;
+_a_ = function (exports) {
+  var a = b = c = d = exports = {};
+  a.b = 1;
+  return exports;
+}({});
+}());
+     */}));
+  });
+
   function assets(actual, dest) {
     var expected = fs.readFileSync(join(__dirname, 'fixtures/expect/', dest), 'utf-8');
     actual.should.be.equal(expected);
