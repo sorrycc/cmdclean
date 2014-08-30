@@ -2,6 +2,10 @@
 
 ---
 
+## 0.2.2
+
+* Fix exports assignment, like `var Cookie = exports = {};`
+
 ## 0.2.1
 
 * Support `exports` assignment
