@@ -2,6 +2,10 @@
 
 ---
 
+## 0.2.3
+
+* update mud wrap, support cmd loader
+
 ## 0.2.2
 
 * Fix exports assignment, like `var Cookie = exports = {};`
