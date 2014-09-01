@@ -4,7 +4,7 @@
 
 ## 0.2.3
 
-* update mud wrap, support cmd loader
+* update umd wrap, support cmd loader
 
 ## 0.2.2
 
