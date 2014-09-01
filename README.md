@@ -12,7 +12,7 @@ A build tool that converts CMD code to standard JavaScript.
 ## Install
 
 ```bash
-$ npm install cmdclean -g
+$ npm install cmdclean
 ```
 
 ## Usage
