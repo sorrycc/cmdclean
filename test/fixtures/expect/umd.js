@@ -16,8 +16,8 @@ a_100_indexjs = function (exports) {
 
 if (typeof exports == "object") {
   module.exports = a_100_indexjs;
-} else if (typeof define == "function" && define.amd) {
-  define([], function(){ return a_100_indexjs });
+} else if (typeof define == "function" && (define.cmd || define.amd)) {
+  define(function(){ return a_100_indexjs });
 } else {
   this["normal"] = a_100_indexjs;
 }
