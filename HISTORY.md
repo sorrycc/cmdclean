@@ -2,6 +2,10 @@
 
 ---
 
+## 0.2.4
+
+* add commonjs condition
+
 ## 0.2.3
 
 * update umd wrap, support cmd loader
