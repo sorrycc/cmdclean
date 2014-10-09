@@ -126,6 +126,32 @@ a = function (exports) {
 
   });
 
+  it('commonjs condition', function() {
+    var result;
+    var expected = multiline(function(){/*
+;(function() {
+var a;
+a = function (exports) {
+  (function () {
+    if (true) {
+      exports = 'abc';
+    }
+  }());
+  return exports;
+}();
+}());
+     */});
+
+    result = cmdclean('define("a",[],function(require,module,exports){(function(){if(typeof module === "object"){module.exports="abc";}})();});');
+    result.should.be.equal(expected);
+
+    result = cmdclean('define("a",[],function(require,module,exports){(function(){if(typeof module === "object" && module.exports === "object"){module.exports="abc";}})();});');
+    result.should.be.equal(expected);
+
+    result = cmdclean('define("a",[],function(require,module,exports){(function(){if("object" === typeof module){module.exports="abc";}})();});');
+    result.should.be.equal(expected);
+  });
+
   function assets(actual, dest) {
     var expected = fs.readFileSync(join(__dirname, 'fixtures/expect/', dest), 'utf-8');
     actual.should.be.equal(expected);
