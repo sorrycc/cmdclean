@@ -110,6 +110,20 @@ _a_ = function (exports) {
 }({});
 }());
      */}));
+
+    result = cmdclean('define("a",[],function(require,module,exports){(function(){module.exports="abc";})();});');
+    result.should.be.equal(multiline(function(){/*
+;(function() {
+var a;
+a = function (exports) {
+  (function () {
+    exports = 'abc';
+  }());
+  return exports;
+}();
+}());
+     */}));
+
   });
 
   function assets(actual, dest) {
