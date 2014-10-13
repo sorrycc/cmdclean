@@ -127,6 +127,19 @@ a = function (exports) {
 }());
      */}));
 
+    result = cmdclean('define("a",[],function(require,module,exports){(function(){facotry(exports);})();});');
+    result.should.be.equal(multiline(function(){/*
+;(function() {
+var a;
+a = function (exports) {
+  exports = {};
+  (function () {
+    facotry(exports);
+  }());
+  return exports;
+}();
+}());
+     */}));
   });
 
   it('commonjs condition', function() {
