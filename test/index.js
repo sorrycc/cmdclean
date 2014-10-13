@@ -80,7 +80,6 @@ a = function () {
 ;(function() {
 var _a_;
 _a_ = function (exports) {
-  exports = {};
   var a = exports;
   a.b = 1;
   return exports;
@@ -93,7 +92,6 @@ _a_ = function (exports) {
 ;(function() {
 var _a_;
 _a_ = function (exports) {
-  exports = {};
   var a = exports = {};
   a.b = 1;
   return exports;
@@ -106,7 +104,6 @@ _a_ = function (exports) {
 ;(function() {
 var _a_;
 _a_ = function (exports) {
-  exports = {};
   var a = b = c = d = exports = {};
   a.b = 1;
   return exports;
@@ -132,12 +129,11 @@ a = function (exports) {
 ;(function() {
 var a;
 a = function (exports) {
-  exports = {};
   (function () {
     facotry(exports);
   }());
   return exports;
-}();
+}({});
 }());
      */}));
   });

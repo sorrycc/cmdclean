@@ -1,7 +1,6 @@
 ;(function() {
 var a_100_indexjs, _a_100_relativejs_;
 _a_100_relativejs_ = function (exports) {
-  exports = {};
   exports.val = 'relative';
   return exports;
 }({});
