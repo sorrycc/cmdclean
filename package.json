@@ -1,6 +1,6 @@
 {
   "name": "cmdclean",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "A build tool that converts CMD code to standard JavaScript.",
   "main": "index",
   "dependencies": {

@@ -2,6 +2,11 @@
 
 ---
 
+## 0.2.5
+
+* add `exports = {}` for code with exports assignment
+* add exports param for code with exports in function params
+
 ## 0.2.4
 
 * add commonjs condition
