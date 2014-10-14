@@ -2,6 +2,10 @@
 
 ---
 
+## 0.2.6
+
+* fix exports default value problem
+
 ## 0.2.5
 
 * add `exports = {}` for code with exports assignment
