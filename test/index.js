@@ -162,6 +162,9 @@ a = function (exports) {
 
     result = cmdclean('define("a",[],function(require,module,exports){(function(){if("object" === typeof module){module.exports="abc";}})();});');
     result.should.be.equal(expected);
+
+    result = cmdclean('define("a",[],function(require,module,exports){(function(){if(typeof module !== "undefined"){module.exports="abc";}})();});');
+    result.should.be.equal(expected);
   });
 
   function assets(actual, dest) {
