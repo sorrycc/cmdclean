@@ -2,6 +2,10 @@
 
 ---
 
+## 0.2.7
+
+* support rename for ignore modules
+
 ## 0.2.6
 
 * fix exports default value problem
