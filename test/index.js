@@ -72,6 +72,22 @@ a = function () {
      */}));
   });
 
+  it.only('rename', function() {
+    var result = cmdclean('define("a",[],function(){var $=require("jquery");});', {
+      rename: {
+        jquery: 'jQuery'
+      }
+    });
+    result.should.be.equal(multiline(function(){/*
+;(function() {
+var a, jQuery;
+a = function () {
+  var $ = jQuery;
+}();
+}());
+     */}));
+  });
+
   it('exports', function() {
     var result;
 
