@@ -2,6 +2,10 @@
 
 ---
 
+## 0.2.8
+
+* fix hidden dead loop problem
+
 ## 0.2.7
 
 * support rename for ignore modules
