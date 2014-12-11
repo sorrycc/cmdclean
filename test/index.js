@@ -72,7 +72,7 @@ a = function () {
      */}));
   });
 
-  it.only('rename', function() {
+  it('rename', function() {
     var result = cmdclean('define("a",[],function(){var $=require("jquery");});', {
       rename: {
         jquery: 'jQuery'
