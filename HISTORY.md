@@ -2,6 +2,10 @@
 
 ---
 
+## 0.2.9
+
+add `is exports` situation: export['default'], property can be Literal
+
 ## 0.2.8
 
 * fix hidden dead loop problem
