@@ -127,6 +127,17 @@ _a_ = function (exports) {
 }());
      */}));
 
+    result = cmdclean('define("a",[],function(require,module,exports){exports["a"]=1;});');
+    result.should.be.equal(multiline(function(){/*
+;(function() {
+var a;
+a = function (exports) {
+  exports['a'] = 1;
+  return exports;
+}({});
+}());
+     */}));
+
     result = cmdclean('define("a",[],function(require,module,exports){(function(){module.exports="abc";})();});');
     result.should.be.equal(multiline(function(){/*
 ;(function() {
