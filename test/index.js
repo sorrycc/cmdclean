@@ -194,6 +194,27 @@ a = function (exports) {
     result.should.be.equal(expected);
   });
 
+  it('commonjs declaraction', function() {
+    var result;
+    var expected = multiline(function(){/*
+;(function() {
+var a;
+a = function () {
+  var c = true;
+}();
+}());
+     */});
+
+    result = cmdclean('define("a",[],function(require,module,exports){var c = typeof module === \'object\';});');
+    result.should.be.equal(expected);
+
+    result = cmdclean('define("a",[],function(require,module,exports){var c = typeof module !== \'undefined\';});');
+    result.should.be.equal(expected);
+
+    result = cmdclean('define("a",[],function(require,module,exports){var c = \'undefined\' !== typeof module;});');
+    result.should.be.equal(expected);
+  });
+
   function assets(actual, dest) {
     var expected = fs.readFileSync(join(__dirname, 'fixtures/expect/', dest), 'utf-8');
     actual.should.be.equal(expected);
