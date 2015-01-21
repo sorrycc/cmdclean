@@ -2,6 +2,10 @@
 
 ---
 
+## 0.2.10
+
+fix(commonjs) convert hasModule declaration to true
+
 ## 0.2.9
 
 add `is exports` situation: export['default'], property can be Literal
