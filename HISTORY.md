@@ -2,6 +2,10 @@
 
 ---
 
+## 0.2.11
+
+fix(utils) recgnize `module['exports']`, Fix [spmjs/spm#1180](https://github.com/spmjs/spm/issues/1180)
+
 ## 0.2.10
 
 fix(commonjs) convert hasModule declaration to true
